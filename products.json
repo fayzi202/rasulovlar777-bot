@@ -1,0 +1,44 @@
+[
+  {
+    "category": "Sement",
+    "items": [
+      { "name": "Sement M400 (Qoraqalpoq)", "price": "65 000 so'm", "unit": "qop (50kg)" },
+      { "name": "Sement M500 (Quvasoy)", "price": "75 000 so'm", "unit": "qop (50kg)" }
+    ]
+  },
+  {
+    "category": "G'ishtlar",
+    "items": [
+      { "name": "Pishgan g'isht (birinchi sort)", "price": "1 500 so'm", "unit": "dona" },
+      { "name": "Shlakoblok", "price": "4 500 so'm", "unit": "dona" }
+    ]
+  },
+  {
+    "category": "Bo'yoqlar",
+    "items": [
+      { "name": "Fasad bo'yog'i (oq, 20kg)", "price": "250 000 so'm", "unit": "chelak" },
+      { "name": "Moy bo'yoq (har xil ranglar, 3kg)", "price": "45 000 so'm", "unit": "banka" }
+    ]
+  },
+  {
+    "category": "Quruq qorishmalar",
+    "items": [
+      { "name": "Rotband suvoq (Knauf, 30kg)", "price": "60 000 so'm", "unit": "qop" },
+      { "name": "Gipsokarton kley (20kg)", "price": "35 000 so'm", "unit": "qop" }
+    ]
+  },
+  {
+    "category": "Metall mahsulotlari",
+    "items": [
+      { "name": "Armatura 12mm", "price": "12 000 so'm", "unit": "metr" },
+      { "name": "Truba profil 40x40", "price": "18 000 so'm", "unit": "metr" }
+    ]
+  },
+  {
+    "category": "Asboblar",
+    "items": [
+      { "name": "Kurak (Lopata)", "price": "25 000 so'm", "unit": "dona" },
+      { "name": "Kafel kesgich", "price": "350 000 so'm", "unit": "dona" }
+    ]
+  }
+]
