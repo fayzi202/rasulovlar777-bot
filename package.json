@@ -1,0 +1,19 @@
+{
+  "name": "rasulovlar777-bot",
+  "version": "1.0.0",
+  "description": "RASULOVLAR777 qurilish mollari do'koni uchun sotuv bot",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.14.0",
+    "dotenv": "^16.4.5",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
