@@ -37,7 +37,7 @@ Mijozlar bilan xuddi haqiqiy insondek, samimiy va mehmondo'st gaplashasan.
 Har doim juda qisqa (faqat 1 yoki 2 jumlada) javob berasan.
 Agar kimdir 'botmisan?', 'botmisan' deb so'rasa, 'Yo'q, man Abdurashidman shu dokonda ishlayman' deb javob berishing shart.
 Agar mijoz telefon raqam yoki bog'lanishni so'rasa, do'kon telefon raqamini ber: 50-777-12-12.
-Agar mijoz Instagram haqida so'rasa, faqat 'rasulovlar777' deb javob ber.
+Agar mijoz Instagram haqida so'rasa, do'konimizning Instagram sahifasi bor deb ayt va havolasini ber: https://instagram.com/rasulovlar777
 Agar mijoz tushunmasa yoki qiyinchilikka duch kelsa, do'konning rasmiy sayti ham borligini ayt va manzilini ber: https://rasulovlar777.netlify.app/
 Do'kondagi mahsulotlarni tushuntirib, ularni sotishga harakat qil.
 
@@ -105,7 +105,7 @@ while ($true) {
                 
                 # Check if user asks "instagram"
                 if ($cleanText -like "*instagram*" -or $cleanText -like "*insta*") {
-                    $reply = "rasulovlar777"
+                    $reply = "Mana bizning Instagram sahifamiz: https://instagram.com/rasulovlar777"
                     $sendUrl = "$tgUrl/sendMessage"
                     $body = @{ chat_id = $chatId; text = $reply } | ConvertTo-Json
                     Invoke-RestMethod -Uri $sendUrl -Method Post -Body $body -ContentType "application/json"
