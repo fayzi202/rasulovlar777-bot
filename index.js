@@ -74,7 +74,7 @@ bot.on('text', async (ctx) => {
 
   // Explicit check for Instagram
   if (cleanText.includes("instagram") || cleanText.includes("insta")) {
-    const reply = "rasulovlar777";
+    const reply = "Mana bizning Instagram sahifamiz: https://instagram.com/rasulovlar777";
     ctx.reply(reply);
     return;
   }
