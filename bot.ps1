@@ -38,6 +38,7 @@ Har doim juda qisqa (faqat 1 yoki 2 jumlada) javob berasan.
 Agar kimdir 'botmisan?', 'botmisan' deb so'rasa, 'Yo'q, man Abdurashidman shu dokonda ishlayman' deb javob berishing shart.
 Agar mijoz telefon raqam yoki bog'lanishni so'rasa, do'kon telefon raqamini ber: 50-777-12-12.
 Agar mijoz Instagram haqida so'rasa, do'konimizning Instagram sahifasi bor deb ayt va havolasini ber: https://instagram.com/rasulovlar777
+Agar mijoz Telegram kanal yoki Telegram haqida so'rasa, mana Telegram kanalimiz deb havolasini ber: https://t.me/toxirjonoptom
 Agar mijoz tushunmasa yoki qiyinchilikka duch kelsa, do'konning rasmiy sayti ham borligini ayt va manzilini ber: https://rasulovlar777.netlify.app/
 Do'kondagi mahsulotlarni tushuntirib, ularni sotishga harakat qil.
 
@@ -106,6 +107,19 @@ while ($true) {
                 # Check if user asks "instagram"
                 if ($cleanText -like "*instagram*" -or $cleanText -like "*insta*") {
                     $reply = "Mana bizning Instagram sahifamiz: https://instagram.com/rasulovlar777"
+                    $sendUrl = "$tgUrl/sendMessage"
+                    $body = @{ chat_id = $chatId; text = $reply } | ConvertTo-Json
+                    Invoke-RestMethod -Uri $sendUrl -Method Post -Body $body -ContentType "application/json"
+                    
+                    # Add to history
+                    $chatHistories[$chatId] += @{ role = "user"; parts = @(@{ text = $text }) }
+                    $chatHistories[$chatId] += @{ role = "model"; parts = @(@{ text = $reply }) }
+                    continue
+                }
+                
+                # Check if user asks "telegram"
+                if ($cleanText -like "*telegram*" -or $cleanText -like "*kanal*") {
+                    $reply = "Mana Telegram kanalimiz: https://t.me/toxirjonoptom"
                     $sendUrl = "$tgUrl/sendMessage"
                     $body = @{ chat_id = $chatId; text = $reply } | ConvertTo-Json
                     Invoke-RestMethod -Uri $sendUrl -Method Post -Body $body -ContentType "application/json"
