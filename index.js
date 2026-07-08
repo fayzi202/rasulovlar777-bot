@@ -79,6 +79,13 @@ bot.on('text', async (ctx) => {
     return;
   }
 
+  // Explicit check for Telegram channel
+  if (cleanText.includes("telegram") || cleanText.includes("kanal")) {
+    const reply = "Mana Telegram kanalimiz: https://t.me/toxirjonoptom";
+    ctx.reply(reply);
+    return;
+  }
+
   // Initialize session if not exists
   if (!sessions.has(chatId)) {
     sessions.set(chatId, []);
